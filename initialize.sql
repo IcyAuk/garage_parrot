@@ -10,6 +10,7 @@ CREATE TABLE articles (
     year INT,
     km INT,
     price INT NOT NULL,
+    image VARCHAR(255),
     description VARCHAR(4096)
 );
 INSERT INTO articles (title, year, km, price, description)

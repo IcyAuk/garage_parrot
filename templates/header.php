@@ -1,7 +1,11 @@
 <?php
     //require_once __DIR__ . "/../lib/config.php";
     //require_once __DIR__ . "/../lib/session.php";
+    include __DIR__. "/../lib/config.php";
+    include __DIR__. "/../lib/session.php";
     include __DIR__. "/../lib/menu.php";
+    include __DIR__. "/../lib/pdo.php";
+    include __DIR__. "/../lib/article.php";
     $currentPage =  basename($_SERVER["SCRIPT_NAME"]);
 
 ?>
@@ -33,7 +37,7 @@
             <header
                 class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
                 <div class="col-md-3 mb-2 mb-md-0">
-                    <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+                    <a href="index.php" class="d-inline-flex link-body-emphasis text-decoration-none">
                         <img src="assets/images/parrot.PNG" alt="logo" width="160">
                     </a>
                 </div>
@@ -52,12 +56,13 @@
                 </ul>
 
                 <div class="col-md-3 text-end">
+
                     <?php if (isset($_SESSION["user"])){?>
+                        <a href="admin/index.php" class="btn btn-outline-primary me-2">Administration</a>
                         <a href="logout.php" class="btn btn-outline-primary me-2">Déconnexion</a>
                     <?php } else {?>
                         <a href="login.php" class="btn btn-outline-primary me-2">Connexion</a>
                         <?php } ?>
-                    <a href="inscription.php" class="btn btn-outline-primary me-2">Inscription</a>
                 </div>
             </header>
     </div>
