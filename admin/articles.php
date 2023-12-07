@@ -35,7 +35,7 @@ $totalPages = ceil($totalArticles / _ADMIN_ITEM_PER_PAGE_);
         <tr>
             <th scope="row"><?=$article["id"];?></th>
             <td><?=$article["title"];?></td>
-            <td> <a href="article.php?id=<?= $article["id"]?>">Modifier</a>
+            <td> <a href="modify_article.php?id=<?= $article["id"]?>">Modifier</a>
                 Supprimer</td>
         </tr>
         <?php } ?>
